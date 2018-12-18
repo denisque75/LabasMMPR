@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.labas.laba2.Laba2Fragment">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textView_laba2_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/y"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/textView_laba2_formula"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textView_laba2_formula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="@string/laba2_formula"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/textView_laba2_y"
+        app:layout_constraintTop_toTopOf="@id/guideline" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textView_laba2_eps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/holo_green_light"
+        android:text="@string/eps"
+        android:textSize="@dimen/formula_size_22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_laba2_y" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textView_laba2_epsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="@dimen/formula_size_22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/textView_laba2_eps"
+        app:layout_constraintTop_toBottomOf="@id/textView_laba2_y"
+        tools:text="12313" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textView_laba2_changeEps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_eps"
+        android:textSize="@dimen/formula_size_22sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        tools:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/textView_laba2_eps"
+        app:layout_constraintEnd_toStartOf="@id/button_laba2_changeEps"/>
+
+    <EditText
+        android:id="@+id/editText_laba2_editEps"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:maxLines="1"
+        android:maxLength="15"
+        android:inputType="numberDecimal"
+        tools:text="01111111"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@id/button_laba2_changeEps"
+        app:layout_constraintTop_toBottomOf="@+id/textView_laba2_eps"/>
+
+    <Button
+        android:id="@+id/button_laba2_changeEps"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="@string/apply"
+        android:background="@drawable/button_shape"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_laba2_eps"
+        tools:visibility="visible"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textView_laba2_console"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        tools:text="123asd\nasd\nasd123asd\nasd\nasd\n\nasdva\n\nsd\n1\nsd\nasd\nasd\nasd\n123aadsasdad\nasasdasdasdasdasdad\nasdasd\nsad\nasdasd\nsad\nasdasdads\nasdasd\nasd\nasd\nasd\nasd\nasd\nasdvasd\n1123aadsasdad\nasasdasdasdasdasdad\nasdasd\nsad\nasdasd\nsad\nasdasdads\nasdasd\nasd\nasd\nasd\nasd\n"
+        app:layout_constraintTop_toTopOf="@id/guideline_forConsole_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_forConsole_bottom"/>
+
+    <Button
+        android:id="@+id/button_laba2_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_laba2_clear"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_laba2_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_laba2_calculate" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_forConsole_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_forConsole_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.87" />
+
+</android.support.constraint.ConstraintLayout>
